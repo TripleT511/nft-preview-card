@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --primary-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+a {
+  text-decoration: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background: var(--primary-bg);
+}
+
+.app {
+  max-width: 1440px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  max-width: 350px;
+  height: 595px;
+  margin: auto;
+  border-radius: 15px;
+  padding: 24px 24px 30px;
+  background: var(--card-bg);
+  box-shadow: 0 10px 30px #0c1727;
+}
+
+.card__img {
+  margin-bottom: 25px;
+}
+
+.card__img img {
+  border-radius: 7px;
+  display: block;
+  width: 100%;
+}
+
+.card__body {
+  padding-bottom: 14px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--line);
+}
+
+.card__title h1 {
+  font-size: 24px;
+  color: var(--White);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card__body p {
+  font-size: 18px;
+  color: var(--Soft-blue);
+  margin-bottom: 25px;
+}
+
+.card__des {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card__left {
+  display: flex;
+  align-items: center;
+  color: var(--Cyan);
+}
+
+.card__left img,
+.card__right img {
+  margin-right: 5px;
+}
+
+.card__right {
+  display: flex;
+  align-items: center;
+  color: var(--Soft-blue);
+}
+
+.card__foot {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.card__foot img {
+  width: 32px;
+  height: 32px;
+  display: block;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.card__foot--des span {
+  font-size: 17px;
+  color: var(--Soft-blue);
+}
+
+.card__foot--des span + span {
+  font-size: 17px;
+  color: var(--White);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 324px;
+    margin: 0 25px;
+  }
+}
