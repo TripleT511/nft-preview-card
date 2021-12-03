@@ -112,7 +112,7 @@ body {
 }
 
 .card__title h1 {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--White);
   font-weight: 600;
   margin-bottom: 15px;
@@ -137,7 +137,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 15px;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
@@ -175,13 +175,13 @@ body {
 }
 
 .card__foot--des span {
-  font-size: 17px;
+  font-size: 18px;
   color: var(--Soft-blue);
 }
 
 .card__foot--des a {
   display: inline-block;
-  font-size: 17px;
+  font-size: 18px;
   color: var(--White);
   transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
