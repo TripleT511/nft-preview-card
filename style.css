@@ -51,7 +51,52 @@ body {
 }
 
 .card__img {
+  position: relative;
   margin-bottom: 25px;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.card__img::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--Cyan);
+  border-radius: 7px;
+  z-index: 1;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  opacity: 0;
+}
+
+.card__img:hover::after {
+  opacity: 0.5;
+}
+.card__view {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--White);
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+}
+
+.card__img:hover .card__view {
+  opacity: 1;
 }
 
 .card__img img {
@@ -67,10 +112,19 @@ body {
 }
 
 .card__title h1 {
-  font-size: 24px;
+  font-size: 18px;
   color: var(--White);
   font-weight: 600;
   margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+}
+
+.card__title h1:hover {
+  color: var(--Cyan);
 }
 
 .card__body p {
@@ -83,7 +137,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 10px;
 }
 
@@ -91,6 +145,7 @@ body {
   display: flex;
   align-items: center;
   color: var(--Cyan);
+  font-weight: 600;
 }
 
 .card__left img,
@@ -124,9 +179,18 @@ body {
   color: var(--Soft-blue);
 }
 
-.card__foot--des span + span {
+.card__foot--des a {
+  display: inline-block;
   font-size: 17px;
   color: var(--White);
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+}
+
+.card__foot--des a:hover {
+  color: var(--Cyan);
 }
 
 @media screen and (max-width: 768px) {
